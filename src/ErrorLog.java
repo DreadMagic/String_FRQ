@@ -53,3 +53,20 @@ public class ErrorLog {
     }
 
 }
+
+//security alert
+//message 1 false
+//disk offline
+//message 2 true
+//file not found on disk3
+//message 3 false
+//read error on disk DSK7
+//message 4 true
+//write error on disk
+//message 5 true
+//error on /dev/disk
+//message 6 false
+//error on /dev/disk
+//message 6 true
+//disk
+//message 7 true
