@@ -17,10 +17,15 @@ public class ErrorLog {
     public boolean containsKey(String keyword) {
         int x = description.indexOf(keyword);
         int y = x+keyword.length();
-        if(x<0) return false;
-        if(x==0) return (" "==description.substring(y,y+1));
-        if(y == description.length()-1) return(" "==description.substring(x-1,x));
-        return ((" "==description.substring(y,y+1))&&(" "==description.substring(x-1,x)));
+        System.out.println(description);
+
+        if(x==-1) return false;
+
+        if(x==0) return (keyword.length()==description.length() || " ".equals(description.substring(y,y+1)));
+
+        if(y == description.length()) return (" ".equals(description.substring(x-1,x)));
+
+        return (" ".equals(description.substring(y,y+1)))&&(" ".equals(description.substring(x-1,x)));
     }
 
     public String getMachineId() { return machineId;}
